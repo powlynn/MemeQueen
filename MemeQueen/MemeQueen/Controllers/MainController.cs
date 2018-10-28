@@ -8,6 +8,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace MemeQueen.Controllers
@@ -17,6 +19,10 @@ namespace MemeQueen.Controllers
         private UserService UserService;
         private MemeService MemeService;
 
+        private CancellationTokenSource WorkerTokenSource;
+        private CancellationToken WorkerToken;
+        private Task WorkerTask;
+
         public MainController()
         {
             this.UserService = new UserService();
@@ -24,11 +30,25 @@ namespace MemeQueen.Controllers
         }
 
         [System.Web.Http.HttpGet]
-        public void Start()
+        public string Start()
         {
             var worker = new ImgurWorker();
 
-            worker.GetMemes();
+            this.WorkerTokenSource = new CancellationTokenSource();
+
+            WorkerTask = new Task(worker.GetMemes, WorkerTokenSource.Token);
+
+            WorkerTask.Start();
+
+            return "Started.";
+        }
+
+        [System.Web.Http.HttpGet]
+        public string Stop()
+        {
+            WorkerTokenSource.Cancel();
+
+            return "Stopped.";
         }
 
         [System.Web.Http.HttpGet]
