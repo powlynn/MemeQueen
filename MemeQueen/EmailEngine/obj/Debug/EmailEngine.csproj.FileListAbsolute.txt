@@ -10,8 +10,3 @@ C:\Users\JoePoulin\Desktop\prj\MemeQueen\EmailEngine\obj\Debug\EmailEngine.cspro
 C:\Users\JoePoulin\Desktop\prj\MemeQueen\EmailEngine\obj\Debug\EmailEngine.csproj.CoreCompileInputs.cache
 C:\Users\JoePoulin\Desktop\prj\MemeQueen\EmailEngine\obj\Debug\EmailEngine.dll
 C:\Users\JoePoulin\Desktop\prj\MemeQueen\EmailEngine\obj\Debug\EmailEngine.pdb
-C:\Users\JoePoulin\Desktop\prj\MemeQueen\MemeQueen\EmailEngine\bin\Debug\EmailEngine.dll
-C:\Users\JoePoulin\Desktop\prj\MemeQueen\MemeQueen\EmailEngine\bin\Debug\EmailEngine.pdb
-C:\Users\JoePoulin\Desktop\prj\MemeQueen\MemeQueen\EmailEngine\obj\Debug\EmailEngine.csproj.CoreCompileInputs.cache
-C:\Users\JoePoulin\Desktop\prj\MemeQueen\MemeQueen\EmailEngine\obj\Debug\EmailEngine.dll
-C:\Users\JoePoulin\Desktop\prj\MemeQueen\MemeQueen\EmailEngine\obj\Debug\EmailEngine.pdb
